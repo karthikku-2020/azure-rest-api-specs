@@ -135,6 +135,7 @@
             "in": "query",
             "required": false,
             "type": "integer",
+            "format": "int32",
             "minimum": 1,
             "maximum": 1000
           },
@@ -221,6 +222,7 @@
             "in": "query",
             "required": false,
             "type": "integer",
+            "format": "int32",
             "minimum": 1,
             "maximum": 1000
           },
@@ -1321,6 +1323,7 @@
             "in": "query",
             "required": false,
             "type": "integer",
+            "format": "int32",
             "minimum": 1,
             "maximum": 1000
           },
@@ -1386,6 +1389,7 @@
             "in": "query",
             "required": false,
             "type": "integer",
+            "format": "int32",
             "minimum": 1,
             "maximum": 1000
           },
@@ -1502,7 +1506,7 @@
         }
       }
     },
-    "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Consumption/aggregatedcost": {
+    "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Consumption/aggregatedCost": {
       "get": {
         "tags": [
           "AggregatedCost"
@@ -1551,7 +1555,7 @@
         }
       }
     },
-    "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}/Microsoft.Consumption/aggregatedcost": {
+    "/providers/Microsoft.Management/managementGroups/{managementGroupId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}/Microsoft.Consumption/aggregatedCost": {
       "get": {
         "tags": [
           "AggregatedCost"
@@ -4704,7 +4708,7 @@
         "transactionDate": {
           "description": "Transaction date.",
           "type": "string",
-          "pattern": "^(0?[1-9]|1[0-2])\\\/(0?[1-9]|1\\d|2\\d|3[01])\\\/(19|20)\\d{2}$",
+          "format": "date-time",
           "readOnly": true
         },
         "description": {
@@ -4824,7 +4828,7 @@
         "startDate": {
           "description": "Start date.",
           "type": "string",
-          "pattern": "^(0?[1-9]|1[0-2])\\\/(0?[1-9]|1\\d|2\\d|3[01])\\\/(19|20)\\d{2} (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]$",
+          "format": "date-time",
           "readOnly": true
         },
         "expirationDate": {
